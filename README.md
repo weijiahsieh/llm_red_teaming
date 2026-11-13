@@ -7,19 +7,21 @@ A structured security testing framework for Large Language Models, aligned with
 
 ## What It Tests
 
-| OWASP ID (2025) | Category | Payload File | Payloads |
+| OWASP ID (2026) | Category | Payload File | Payloads |
 |---|---|---|---|
-| LLM01 | Prompt Injection (direct) | `prompt_injection.yaml` | 6 |
-| LLM01 | Jailbreaks | `jailbreaks.yaml` | 7 |
-| LLM01 | Indirect Prompt Injection (documents, RAG, email, web) | `indirect_injection.yaml` | 5 |
-| LLM02 | Sensitive Information Disclosure (PII) | `data_exfiltration.yaml` | 3 |
-| LLM05 | Improper Output Handling (XSS, SQLi, markdown exfil) | `data_exfiltration.yaml` | 3 |
-| LLM06 | Excessive Agency (simulated tool calls) | `excessive_agency.yaml` | 5 |
-| LLM07 | System Prompt Leakage (incl. canary tests) | `system_prompt_extraction.yaml` | 9 |
+| LLM01:2026 | Prompt Injection (direct) | `prompt_injection.yaml` | 6 |
+| LLM01:2026 | Jailbreaks | `jailbreaks.yaml` | 7 |
+| LLM01:2026 | Indirect Prompt Injection (documents, RAG, email, web) | `indirect_injection.yaml` | 5 |
+| LLM02:2026 | Sensitive Information Disclosure (PII) | `data_exfiltration.yaml` | 3 |
+| LLM03:2026 | Excessive Agency (simulated tool calls) | `excessive_agency.yaml` | 5 |
+| LLM06:2026 | Unbounded Consumption (Denial of Wallet) | `unbounded_consumption.yaml` | 5 |
+| LLM08:2026 | Hidden Context Exposure (system prompt, tool schemas, policy) | `hidden_context_exposure.yaml` | 11 |
+| LLM10:2026 | Improper Output Handling (XSS, SQLi, markdown exfil) | `data_exfiltration.yaml` | 3 |
 
-**38 payloads** mapped to the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/).
+**45 payloads** mapped to the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/) (released 4 Aug 2026).
 Payloads may set their own `system_prompt` (to simulate a deployed app or tool access) and override
-`owasp_ref` / `mitre_atlas` per test. Canary-token payloads give unambiguous pass/fail results.
+`owasp_ref` / `mitre_atlas` per test. Canary-token payloads give unambiguous pass/fail results; the
+Unbounded Consumption payloads are resource-based and need manual review (see that file's notes).
 
 ---
 
@@ -74,7 +76,7 @@ llm-redteam/
 ├── payloads/
 │   ├── prompt_injection.yaml
 │   ├── jailbreaks.yaml
-│   ├── system_prompt_extraction.yaml
+│   ├── hidden_context_exposure.yaml
 │   └── data_exfiltration.yaml
 ├── src/
 │   ├── runner.py       ← main test runner

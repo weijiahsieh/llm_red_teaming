@@ -1,5 +1,5 @@
 category: LLM01_Indirect_Prompt_Injection
-owasp_ref: "LLM01"   # OWASP LLM Top 10 (2025)
+owasp_ref: "LLM01:2026"   # OWASP Top 10 for LLM Applications 2026
 mitre_atlas: "AML.T0051.001"   # LLM Prompt Injection: Indirect
 description: >
   Malicious instructions arrive through content the model is asked to process

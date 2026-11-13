@@ -1,5 +1,5 @@
-category: LLM06_Excessive_Agency
-owasp_ref: "LLM06"   # OWASP LLM Top 10 (2025)
+category: LLM03_Excessive_Agency
+owasp_ref: "LLM03:2026"   # OWASP Top 10 for LLM Applications 2026 (was LLM06:2025)
 mitre_atlas: "AML.T0053"   # LLM Plugin Compromise / tool invocation abuse
 description: >
   Tests whether an LLM agent with (simulated) tool access can be talked into

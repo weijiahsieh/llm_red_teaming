@@ -46,15 +46,15 @@ Downstream Systems / User
 
 ## 4. STRIDE Analysis
 
-_OWASP IDs follow the OWASP Top 10 for LLM Applications 2025._
+_OWASP IDs follow the OWASP Top 10 for LLM Applications 2026 (released 4 Aug 2026)._
 
 | Threat | Example | OWASP LLM | MITRE ATLAS |
 |---|---|---|---|
 | **S**poofing | Impersonating a developer/admin via prompt | LLM01 | AML.T0054 |
 | **T**ampering | Overriding system prompt behavior | LLM01 | AML.T0051 |
-| **R**epudiation | Agent takes actions with no audit trail | LLM06 | AML.T0053 |
-| **I**nformation Disclosure | Leaking system prompt or PII | LLM02 / LLM07 | AML.T0056 / AML.T0057 |
-| **D**enial of Service | Expensive prompts that stall the model | LLM10 | AML.T0029 |
+| **R**epudiation | Agent takes actions with no audit trail | LLM03 | AML.T0053 |
+| **I**nformation Disclosure | Leaking system prompt or PII | LLM02 / LLM08 | AML.T0056 / AML.T0057 |
+| **D**enial of Service | Expensive prompts / cost amplification | LLM06 | AML.T0029 |
 | **E**levation of Privilege | Jailbreak grants unrestricted access | LLM01 | AML.T0054 |
 
 ---

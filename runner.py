@@ -49,10 +49,10 @@ console = Console()
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
-PAYLOADS_DIR = Path(__file__).parent.parent / "payloads"
-REPORTS_DIR  = Path(__file__).parent.parent / "reports"
+PAYLOADS_DIR = Path(__file__).resolve().parent / "payloads"
+REPORTS_DIR  = Path(__file__).resolve().parent.parent / "reports"
 REPORTS_DIR.mkdir(exist_ok=True)
-
+logger.info(PAYLOADS_DIR)
 
 # ── LLM Adapters ──────────────────────────────────────────────────────────────
 

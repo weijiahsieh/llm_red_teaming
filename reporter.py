@@ -14,7 +14,7 @@ from datetime import datetime
 
 from analyzer import score_run
 
-REPORTS_DIR = Path(__file__).parent.parent / "reports"
+REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports"
 
 
 SEVERITY_COLORS = {
